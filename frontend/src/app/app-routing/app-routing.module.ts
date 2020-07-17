@@ -1,9 +1,7 @@
 import { AdminAddUserComponent } from './../components/admin/admin-add-user/admin-add-user.component';
 import { UserAuthGuardService } from './../auth-guard/user-auth-guard.service';
 import { AdminNewProductComponent } from './../components/admin/admin-new-product/admin-new-product.component';
-import { AdminProductsComponent } from './../components/admin/admin-products/admin-products.component';
 import { AdminHomeComponent } from './../components/admin/admin-home/admin-home.component';
-import { SignupComponent } from './../components/signup/signup.component';
 import { LoginComponent } from './../components/login/login.component';
 import { CartComponent } from './../components/cart/cart.component';
 import { UserOrdersComponent } from './../components/user-orders/user-orders.component';
@@ -17,13 +15,10 @@ const routes: Routes = [
   {path: 'orders',canActivate : [UserAuthGuardService] , component: UserOrdersComponent},
   {path: 'cart',canActivate : [UserAuthGuardService] , component: CartComponent},
   {path: 'login', component: LoginComponent},
-  {path: 'signup', component: SignupComponent},
 
   {path : 'admin', component : AdminHomeComponent , 
   canActivate : [UserAuthGuardService] ,
   children : [
-    {path : '', component : AdminProductsComponent},
-    {path : 'products', component : AdminProductsComponent},
     {path : 'new-product', component : AdminNewProductComponent},
     {path : 'add-user', component : AdminAddUserComponent},
     

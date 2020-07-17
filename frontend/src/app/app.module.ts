@@ -12,12 +12,10 @@ import { ProductCardComponent } from './components/product-card/product-card.com
 import { UserOrdersComponent } from './components/user-orders/user-orders.component';
 import { CartComponent } from './components/cart/cart.component';
 import { LoginComponent } from './components/login/login.component';
-import { SignupComponent } from './components/signup/signup.component';
 import { HttpClientModule, HTTP_INTERCEPTORS }from '@angular/common/http';
 import { ProductQuantityComponent } from './components/product-quantity/product-quantity.component'
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { AdminHomeComponent } from './components/admin/admin-home/admin-home.component';
-import { AdminProductsComponent } from './components/admin/admin-products/admin-products.component';
 import { AdminNewProductComponent } from './components/admin/admin-new-product/admin-new-product.component';
 import { AdminAddUserComponent } from './components/admin/admin-add-user/admin-add-user.component';
 
@@ -32,10 +30,8 @@ import { AdminAddUserComponent } from './components/admin/admin-add-user/admin-a
     UserOrdersComponent,
     CartComponent,
     LoginComponent,
-    SignupComponent,
     ProductQuantityComponent,
     AdminHomeComponent,
-    AdminProductsComponent,
     AdminNewProductComponent,
     AdminAddUserComponent,
   ],

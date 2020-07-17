@@ -12,7 +12,6 @@
                 <th>Price</th>
                 <th>Quantity</th>
                 <th>Total Price</th>
-                <th>Order Satus</th>
                 
             </tr>
         </thead>
@@ -25,8 +24,6 @@
                 <td>{{order.product.price}}</td>
                 <td>{{order.quantity}}</td>
                 <td>{{order.quantity * order.product.price}}</td>
-                <td><span class="badge" [class.badge-warning]='order.status=="pending"' 
-                    [class.badge-success]='order.status=="completed"'>{{order.status}}</span></td>
             </tr>
         </tbody>
     </table>

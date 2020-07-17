@@ -14,7 +14,7 @@ export class HeaderComponent implements OnInit {
   numberOfItems : number = 0;
   isLoggedIn = false;
   isAdminUrl = false;
-  isAdmin$;
+  isAdmin;
   constructor(private cartService : CartService ,
     
     private router : Router ,
@@ -59,11 +59,10 @@ export class HeaderComponent implements OnInit {
 
   checkAdmin(){
      //check user is admin or not
-    this.isAdmin$ =  this.userService.isAdmin()
+    this.isAdmin =  this.userService.isAdmin()
   }
 
   logout(){
-    alert('')
     this.userService.logout()
      this.router.navigate(['login'])
   }
